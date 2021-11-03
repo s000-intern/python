@@ -1,4 +1,4 @@
-# casting boolen value to an integer
+ssss# casting boolen value to an integer
 flag_true = True
 flag_false = False
 print(type(flag_true))
