@@ -1,185 +1,137 @@
-# create a tuple using ()
-# number tuple
-number_tuple = (10, 20, 25.75)
-print(number_tuple)
-# Output (10, 20, 25.75)
+Employee = ["Raj",102,"USA"]
+Dep1 = ["CS",10]
+Dep2 = ["IT",11]
+HOD_CS = [10,"Mr. Shyam"]
+HOD_IT = [11,"Mr. Harsh"]
 
-# string tuple
-string_tuple = ('Deepali', 'Nikita', 'Pooja')
-print(string_tuple)
-# Output (''Deepali', 'Nikita', 'Pooja')
+print("Printing employee data...")
+print("Name : %s, ID = %d , Country = %s"%(Employee[0],Employee[1],Employee[2]))
 
-# mixed type tuple
-sample_tuple = ('Deepali', 30, 45.75, [25, 78])
-print(sample_tuple)
-# Output ('Deepali', 30, 45.75, [25, 78])
+print("Printing Departments...")
+print("Deparment 1:\nName:%s, ID: %d\nDepartment 2:\nName:%s,ID:%s"%(Dep1[0],Dep2[1],Dep2[0],Dep2[1]))
 
-# create a tuple using tuple() constructor
-sample_tuple2 = tuple(('Deepali', 30, 45.75, [23, 78]))
-print(sample_tuple2)
-# Output ('Deepali', 30, 45.75, [23, 78])
+print("HOD details...")
+print(" CS HOD Name : %s,ID : %d"%(HOD_CS[1],HOD_CS[0]))
+print(" IT HOD Name : %s, ID=%d"%(HOD_IT[1],HOD_IT[0]))
 
-
-# packing variable into tuple
-
-tup1 = 1,2,"hello"
-print(tup1)
-
-print(type(tup1))
-
-# unpacking variable into tuple
-
-a,b,c=tup1
-print(tup1)
+print(type(Employee),type(Dep1),type(Dep2),type(HOD_CS),type(HOD_IT))
 
 
 
-tup = ["p","y","t","h","o","n"]
-print(len(tup))
 
 
-# create a tuple
-tup1 = (1,2,3,"hi",[4,5,6])
-
-# iterate a tuple
-for i in tup1:
-    print(i)
-
-tuple1 = ('P', 'Y', 'T', 'H', 'O', 'N')
-# Negative indexing
-# print last item of a tuple
-print(tuple1[-1])  # N
-# print second last
-print(tuple1[-2])  # O
-
-# iterate a tuple using negative indexing
-for i in range(-6, 0):
-    print(tuple1[i], end=", ")
-    # Output P, Y, T, H, O, N,
-
-    tuple1 = (10, 20, 30, 40, 50)
-
-    # get index of item 30
-    position = tuple1.index(30)
-    print(position)
-
-    tuple1 = (10, 20, 30, 40, 50, 60, 70, 80)
-    # Limit the search locations using start and end
-    # search only from location 4 to 6
-    # start = 4 and end = 6
-    # get index of item 60
-    position = tuple1.index(60, 4, 6)
-    print(position)
+emp = ["John", 102, "USA"]
+Dep1 = ["CS",10]
+Dep2 = ["IT",11]
+HOD_CS = [10,"Mr. Holding"]
+HOD_IT = [11, "Mr. Bewon"]
+print("printing employee data...")
+print("Name : %s, ID: %d, Country: %s"%(emp[0],emp[1],emp[2]))
+print("printing departments...")
+print("Department 1:\nName: %s, ID: %d\nDepartment 2:\nName: %s, ID: %s"%(Dep1[0],Dep2[1],Dep2[0],Dep2[1]))
+print("HOD Details ....")
+print("CS HOD Name: %s, Id: %d"%(HOD_CS[1],HOD_CS[0]))
+print("IT HOD Name: %s, Id: %d"%(HOD_IT[1],HOD_IT[0]))
+print(type(emp),type(Dep1),type(Dep2),type(HOD_CS),type(HOD_IT))
 
 
 
-tuple1 = (10, 20, 30, 40, 50, 60, 70, 80)
-# checking whether item 50 exists in tuple
-print(50 in tuple1)
-# Output True
-print(500 in tuple1)
-# Output False
 
 
-tup1 = (1,2,3,4,5)
+list = [1,2,3,4,5,6,7]
+print(list[0])
+print(list[1])
+print(list[2])
+print(list[3])
 
-#coverting tuple into list
-a = list(tup1)
-a.append(6)
+# slicing the element
 
-# converting list back into tuple
-tup1=tuple(a)
-print(tup1)
+print(list[0:6])
 
+# By default the index value is 0 so its starts from the 0th element and go for index -1.
 
-
-tup = (5,6,7,[8,9,10])
-print(tup)
-
-# modifing last item first value:
-tup[3][0] = 89
-print(tup)
+print(list[:])
+print(list[2:5])
+print(list[1:6:2])
 
 
-a = (2,3,4,5,6)
-del a
+
+
+list = [1,2,3,4,5,6]
+print(list)
+
+# It will assign value to the value to the second index
+list[2] = 10
+print(list)
+
+# Adding multiple-element
+
+list[1:3] = [56,78]
+print(list)
+
+# It will add value at the end of the list
+list[-1] = 90
+print(list)
+
+
+
+
+# Declaring the empty list
+l = []
+
+# Number of elements entered by the users
+
+n = int(input(" * Enter number in list"))
+
+# for - loop to take the input
+for i in range(0,n):
+    l.append(input(" Enter item :"))
+print(" * Printing the list items...")
+
+for i in l:
+    print(i,end=" ")
+
+a = [6, 4, 6, 6, 8, 12]
+
+for item in a:
+    a.remove(6)
 print(a)
 
 
-tuple1 = (0, 1, 2, 3, 4, 5)
 
-# converting tuple into a list
-sample_list = list(tuple1)
-# reomve 2nd item
-sample_list.remove(2)
 
-# converting list back into a tuple
-tuple1 = tuple(sample_list)
-print(tuple1)
-# Output (0, 1, 3, 4, 5)
+list = [0,1,2,3,4]
+print(" original list :")
+for i in list:
+    print(i,end = " ")
+list.remove(2)
+print(" \n after removal of 2nd element:")
 
 
 
-tuple1 = (10, 20, 60, 30, 60, 40, 60)
-# Count all occurrences of item 60
-count = tuple1.count(60)
-print(count)
-# Output 3
 
-count = tuple1.count(600)
-print(count)
-# Output 0
+my_list = [2, 4, 6, 8, 10, 12]
 
+# remove item present at index 2
+my_list.pop(2)
+print(my_list)
+# Output [2, 4, 8, 10, 12]
 
-tuple1 = (1, 2, 3, 4, 5)
-tuple2 = (3, 4, 5, 6, 7)
-
-# concatenate tuples using + operator
-tuple3 = tuple1 + tuple2
-print(tuple3)
-# Output (1, 2, 3, 4, 5, 3, 4, 5, 6, 7)
+# remove item without passing index number
+my_list.pop()
+print(my_list)
+# Output [2, 4, 8, 10]
 
 
+list1 = [1,2,2,3,55,98,65,65,13,29]
 
-tuple1 = (1, 2, 3, 4, 5)
-tuple2 = (3, 4, 5, 6, 7)
+# an empty list to store unique values
+list2 = []
 
-# using sum function
-tuple3 = sum((tuple1, tuple2), ())
-print(tuple3)
-# Output (1, 2, 3, 4, 5, 3, 4, 5, 6, 7)
+for i in list1:
+    if i not in list2:
+        list2.append(i)
+print(list2)
 
-
-nest_tup = ((1,2,3),(4,5,6),"python")
-
-# access the first item of the third tuple
-print(nest_tup[2][0])
-
-# iterate a nested tuple
-for i in nest_tup:
-    print("tuple",i,"element")
-    for j in i:
-        print(j,end=",")
-    print("\n")
-
-tuple1 = ('xyz', 'zara', 'abc')
-# The Maximum value in a string tuple
-print(max(tuple1))
-# Output zara
-
-# The minimum value in a string tuple
-print(min(tuple1))
-# Output abc
-
-tuple2 = (11, 22, 10, 4)
-# The Maximum value in a integer tuple
-print(max(tuple2))
-# Output 22
-# The minimum value in a integer tuple
-print(min(tuple2))
-# Output 4
-
-
-tuple3 = ('a', 'e', 11, 22, 15)
-# max item
-print(max(tuple3))
+for i in list:
+    print(i,end=" ")
